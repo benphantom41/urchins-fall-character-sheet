@@ -1,0 +1,93 @@
+body {
+    background-color: #053d41;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav ul li {
+    float: left;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 17px;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+.character-sheet-background {
+    margin: auto;
+    width: 595px;
+    height: 842px;
+    left: 0px;
+    top: 0px;
+    background: #ffffff;
+    border: 2px solid #000000;
+
+
+}
+
+.player-info {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    float: right;
+    width: 432px;
+    height: 202px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.basic-player-info {
+    display: grid;
+    grid-template-columns: 216px 216px;
+    grid-template-rows: auto auto;
+    float: right;
+    width: 432px;
+    height: 80px;
+
+}
+
+.player-info-item {
+    /*background-color: aqua;*/
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.item-label {
+
+    position: relative;
+    margin: auto;
+    width: 61px;
+    height: 11px;
+
+
+    border: 1px solid #000000;
+    border-radius: 345px 345px 0px 0px;
+    transform: rotate(-180deg);
+    top: 0%;
+}
+
+.label-text{
+    position: relative;
+    margin: auto;
+    font-size: 8px;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+    transform: rotate(180deg);
+}
+
+
+
+input#name {
+    margin: auto;
+    border: none;
+}
+
+.text-label-wrapper {
+    /*border: 1px solid red;*/
+    display: flex;
+    align-items: center;
+}
