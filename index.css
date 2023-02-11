@@ -1,5 +1,7 @@
 body {
     background-color: #053d41;
+    font-family: sans-serif;
+    zoom: 200%;
 }
 
 .topnav {
@@ -222,6 +224,7 @@ input#name {
     width: 590px;
     top: 5px;
     left: 2px;
+    background-color: rgba(0,0,0,0);
 }
 
 .Stats{
@@ -255,4 +258,85 @@ td img{
 td{
     font-size: 10px;
     font-weight: 600;
+}
+
+.Health{
+    position: relative;
+    float:right;
+    width: 310px;
+    height: inherit;
+    border: 2px solid black;
+    border-radius: 0px 6px 6px 0px;
+    right:12px;
+}
+
+.MaxHP input, .Initiative input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 50px;
+    text-align: center;
+
+}
+
+.MaxHP, .Initiative
+{
+    font-size: 10px;
+    margin-bottom: 3px;
+    color: #696969;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.MaxHP{
+    float: left;   
+}
+
+.Initiative{
+    float: right;
+}
+
+#Status{
+    position: relative;
+    margin: auto;
+    border: none;
+    resize: none;
+    left: 1px;
+    top: 6px;
+}
+
+.Talents{
+    position: relative;
+    width: 140px;
+    height: 310px;
+    top: 10px;
+    left: 2px;
+    float: left;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.Talent-Item{
+    font-size: 9px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.Talent-Dot, .Talent-Dot-Toggled{
+    position: relative;
+    float: left;
+    width: 22px;
+    height: 7px;
+    border: 1px solid black;
+    border-radius: 20px;
+    top:3px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.Talent-Dot{
+    background-color: white;
+}
+
+.Talent-Dot-Toggled{
+    background-color: black;
 }
