@@ -159,7 +159,7 @@ input#name {
 .spell-slot-grid{
     display: grid;
     grid-auto-rows: 26px;
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 160px 1500px;
 }
 
 .spell-slot-row{
@@ -185,7 +185,7 @@ input#name {
     overflow:hidden;
 }
 
-.SS-button{
+.SS-button, .SS-button-toggled{
     position: relative;
     top: -20%;
     height: 15px;
@@ -193,6 +193,15 @@ input#name {
    /* background-color: red;*/
     border-right: 1px solid black;
 }
+
+.SS-button{
+    background-color: white;
+}
+
+.SS-button-toggled{
+    background-color: black;
+}
+
 
 #spell-slot-text{
     position: relative;
@@ -205,12 +214,45 @@ input#name {
     text-align: center;
 }
 
-.spell-slots img{
+.Stats_Health{
+    
     position: relative;
-    top: -83%;
-    left: 44%;
+    float: left;;
+    height: 160px;
+    width: 590px;
+    top: 5px;
+    left: 2px;
 }
 
-.spell-slot-grid:nth-child(5){
-    background-color: red;
+.Stats{
+    position: relative;
+    float: left;
+    width: 270px;
+    height: inherit;
+
+    border: 2px solid black;
+    border-radius: 6px 0px 0px 6px;
+}
+
+td input{
+    position: relative;
+    height: 35px;
+    width: 40px;
+    top: 2px;
+    left:1px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+td img{
+    right: 20%;
+    top:0%;
+}
+td{
+    font-size: 10px;
+    font-weight: 600;
 }
