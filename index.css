@@ -84,9 +84,10 @@ body {
 
 
 
-input#name {
+input#name, input#player, input#race-class, input#exp {
     margin: auto;
     border: none;
+    text-align: center;
 }
 
 .text-label-wrapper {
@@ -174,7 +175,7 @@ input#name {
     float: left;
 }
 
-.spell-slot-buttons{
+[class^=spell-slot-buttons]{
     position: relative;
     width: 100px;
     height: 9px;
@@ -201,11 +202,11 @@ input#name {
 }
 
 .SS-button-toggled{
-    background-color: black;
+    background-color: rgb(54, 54, 54);
 }
 
 
-#spell-slot-text{
+[id^="spell-slot-text"]{
     position: relative;
     height: 15px;
     width: 20px;
