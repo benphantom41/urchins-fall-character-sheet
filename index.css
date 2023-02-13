@@ -4,6 +4,20 @@ body {
     zoom: 200%;
 }
 
+textarea
+{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    margin: auto;
+    border: none;
+    resize: none;
+    background-color: rgba(0,0,0,0);
+    /*border: 1px solid red;*/
+}
+
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -32,12 +46,14 @@ body {
 }
 
 .player-info {
+    position: relative;
     border: 2px solid #000000;
     border-radius: 5px;
     float: right;
-    width: 432px;
+    width: 434px;
     height: 202px;
     margin-top: 10px;
+    right: 12px;
     overflow: hidden;
 }
 
@@ -297,10 +313,6 @@ td{
 }
 
 #Status{
-    position: relative;
-    margin: auto;
-    border: none;
-    resize: none;
     left: 1px;
     top: 6px;
 }
@@ -340,4 +352,80 @@ td{
 
 .Talent-Dot-Toggled{
     background-color: black;
+}
+
+.Notes{
+    position: relative;
+    float: right;
+    height: 310px;
+    width: 140px;
+    border: 2px solid black;
+    border-radius: 6px;
+    top: 10px;
+    right: 10px;
+}
+
+.Strikes{
+    position: relative;
+    margin: auto;
+    height: 310px;
+    width: 288px;
+    border: 2px solid black;
+    border-radius: 6px;
+    top: 382px;
+    right: 4px;
+}
+
+.Strikes textarea
+{
+    bottom: 365px;
+    left: 2px;
+}
+
+.Languages
+{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border: 2px solid black;
+    border-radius: 6px;
+    top: 385px;
+    left: 2px;
+}
+
+.Traits
+{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border: 2px solid black;
+    border-radius: 6px;
+    top: 245px;
+    left: 147px;
+}
+
+.Equipment
+{
+    position: relative;
+    width: 288px;
+    height: 140px;
+    border: 2px solid black;
+    border-radius: 6px;
+    top: 105px;
+    left: 293px;
+}
+
+.Languages textarea{
+    bottom: 370px;
+    left: 1px;
+}
+
+.Traits textarea{
+    bottom: 230px;
+    left:1px;
+}
+
+.Equipment textarea{
+    bottom: 90px;
+    left: 2px;
 }

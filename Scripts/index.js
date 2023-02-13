@@ -69,6 +69,16 @@ function Save() {
 
     saveData.Talents = parseTalents();
 
+    saveData.MaxHP = document.getElementById('HP_Text').value;
+    saveData.Initiative = document.getElementById('Init_Text').value;
+    saveData.Status = document.getElementById('Status').value;
+
+    saveData.Notes = document.getElementById('Notes').value;
+    saveData.Strikes = document.getElementById('Strikes').value;
+    saveData.Languages = document.getElementById('Languages').value;
+    saveData.Traits = document.getElementById('Traits').value;
+    saveData.Equipment = document.getElementById('Equipment').value;
+
     var data = JSON.stringify(saveData);
     localStorage.setItem('data', data);
 
@@ -100,19 +110,16 @@ function loadSpellSlots(slot, data) {
     }
 }
 
-function parseTalents()
-{
+function parseTalents() {
     var talents = document.querySelectorAll("[class^=Talent-Dot]");
     var data = '';
 
     for (let i = 0; i < talents.length; i++) {
         const element = talents[i];
-        if(element.className == 'Talent-Dot-Toggled')
-        {
+        if (element.className == 'Talent-Dot-Toggled') {
             data += '1';
         }
-        else if (element.className == 'Talent-Dot')
-        {
+        else if (element.className == 'Talent-Dot') {
             data += '0';
         }
     }
@@ -120,17 +127,15 @@ function parseTalents()
     return data;
 }
 
-function loadTalents(data)
-{
+function loadTalents(data) {
     var talents = document.querySelectorAll("[class^=Talent-Dot]");
 
     for (let i = 0; i < talents.length; i++) {
         const element = talents[i];
-        if(data[i] == '1')
-        {
+        if (data[i] == '1') {
             element.className = 'Talent-Dot-Toggled';
         }
-       
+
     }
 }
 
@@ -175,6 +180,18 @@ function Load() {
     document.getElementById('Stat-Charm').value = saveData.Stat_Charm;
 
     loadTalents(saveData.Talents);
+
+    document.getElementById('HP_Text').value = saveData.MaxHP;
+    document.getElementById('Init_Text').value = saveData.Initiative;
+    document.getElementById('Status').value = saveData.Status;
+
+    document.getElementById('Notes').value = saveData.Notes;
+    document.getElementById('Strikes').value = saveData.Strikes;
+    document.getElementById('Languages').value = saveData.Languages;
+    document.getElementById('Traits').value = saveData.Traits;
+    document.getElementById('Equipment').value = saveData.Equipment;
+
+
 }
 
 Load();
