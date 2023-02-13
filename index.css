@@ -32,6 +32,9 @@ textarea {
 
 }
 
+.character-sheet{
+    overflow: hidden;
+}
 
 .character-sheet-background {
     position: relative;
