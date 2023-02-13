@@ -4,8 +4,7 @@ body {
     zoom: 200%;
 }
 
-textarea
-{
+textarea {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -13,7 +12,7 @@ textarea
     margin: auto;
     border: none;
     resize: none;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     /*border: 1px solid red;*/
 }
 
@@ -33,7 +32,9 @@ textarea
 
 }
 
+
 .character-sheet-background {
+    position: relative;
     margin: auto;
     width: 595px;
     height: 842px;
@@ -45,6 +46,26 @@ textarea
 
 }
 
+.Logo {
+    position: relative;
+    width: 139px;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+.Portrait {
+    position: relative;
+    width: 140px;
+    height: 160px;
+    border: 2px solid black;
+    border-radius: 6px;
+    float: left;
+    top: 0px;
+    left: 2px
+}
+
 .player-info {
     position: relative;
     border: 2px solid #000000;
@@ -52,7 +73,7 @@ textarea
     float: right;
     width: 434px;
     height: 202px;
-    margin-top: 10px;
+    top: -42px;
     right: 12px;
     overflow: hidden;
 }
@@ -73,6 +94,11 @@ textarea
     border-right: 2px solid black;
 }
 
+.player-info-item:nth-child(2),
+.player-info-item:nth-child(4) {
+    border-right: none;
+}
+
 .item-label {
 
     position: relative;
@@ -82,12 +108,14 @@ textarea
 
 
     border: 1px solid #000000;
+    border-bottom: none;
+
     border-radius: 345px 345px 0px 0px;
     transform: rotate(-180deg);
     top: 0%;
 }
 
-.label-text{
+.label-text {
     position: relative;
     margin: -1px auto;
     font-size: 8px;
@@ -100,7 +128,10 @@ textarea
 
 
 
-input#name, input#player, input#race-class, input#exp {
+input#name,
+input#player,
+input#race-class,
+input#exp {
     margin: auto;
     border: none;
     text-align: center;
@@ -112,7 +143,7 @@ input#name, input#player, input#race-class, input#exp {
     align-items: center;
 }
 
-.guard-compass{
+.guard-compass {
     position: relative;
     top: 40%;
     width: 125px;
@@ -123,65 +154,66 @@ input#name, input#player, input#race-class, input#exp {
 .guard-compass .item-label {
     top: -124%;
     transform: rotate(0deg);
+    width: 90px;
 }
 
-.guard-compass .item-label .label-text{
+.guard-compass .item-label .label-text {
     top: 10%;
-    font-size: 6px;
     transform: rotate(0deg);
 }
 
-.guard-compass img{
+.guard-compass img {
     position: relative;
     top: -65%;
     margin-left: 4px;
 }
 
-.guard-compass input{
+.guard-compass input {
     position: relative;
     width: 35px;
     height: 35px;
     text-align: center;
-    border:none;
-    background-color: rgba(0,0,0,0);
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-#GC-top{
+#GC-top {
     top: -147%;
     right: -34.4%
 }
 
-#GC-right{
+#GC-right {
     top: -125%;
     right: -26%
 }
 
-#GC-left{
+#GC-left {
     top: -125%;
     right: 53%
 }
 
-#GC-bottom{
+#GC-bottom {
     top: -131%;
     right: -34.4%
 }
 
-.spell-slots{
+.spell-slots {
     position: relative;
     float: right;
     top: -21.6%;
     height: 122px;
     width: 303px;
-    
+
 }
 
-.spell-slot-grid{
+
+.spell-slot-grid {
     display: grid;
     grid-auto-rows: 26px;
     grid-template-columns: 160px 1500px;
 }
 
-.spell-slot-row{
+.spell-slot-row {
     position: relative;
     /*border: 1px solid red;*/
     top: 11px;
@@ -191,60 +223,61 @@ input#name, input#player, input#race-class, input#exp {
     float: left;
 }
 
-[class^=spell-slot-buttons]{
+[class^=spell-slot-buttons] {
     position: relative;
     width: 100px;
     height: 9px;
     border: 2px solid black;
     border-radius: 12px;
-    
+
     top: -120%;
     display: inline-grid;
     grid-template-columns: 20px 20px 20px 20px 20px;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.SS-button, .SS-button-toggled{
+.SS-button,
+.SS-button-toggled {
     position: relative;
     top: -20%;
     height: 15px;
     width: 20px;
-   /* background-color: red;*/
+    /* background-color: red;*/
     border-right: 1px solid black;
 }
 
-.SS-button{
+.SS-button {
     background-color: white;
 }
 
-.SS-button-toggled{
+.SS-button-toggled {
     background-color: rgb(54, 54, 54);
 }
 
 
-[id^="spell-slot-text"]{
+[id^="spell-slot-text"] {
     position: relative;
     height: 15px;
     width: 20px;
     top: -130%;
     border: none;
     border-bottom: 1px solid black;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     text-align: center;
 }
 
-.Stats_Health{
-    
+.Stats_Health {
+
     position: relative;
-    float: left;;
+    float: left;
     height: 160px;
     width: 590px;
-    top: 5px;
+    top: -37px;
     left: 2px;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.Stats{
+.Stats {
     position: relative;
     float: left;
     width: 270px;
@@ -254,40 +287,42 @@ input#name, input#player, input#race-class, input#exp {
     border-radius: 6px 0px 0px 6px;
 }
 
-td input{
+td input {
     position: relative;
     height: 35px;
     width: 40px;
     top: 2px;
-    left:1px;
+    left: 1px;
     border: none;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     text-align: center;
     font-size: 15px;
     font-weight: 600;
 
 }
 
-td img{
+td img {
     right: 20%;
-    top:0%;
+    top: 0%;
 }
-td{
+
+td {
     font-size: 10px;
     font-weight: 600;
 }
 
-.Health{
+.Health {
     position: relative;
-    float:right;
+    float: right;
     width: 310px;
     height: inherit;
     border: 2px solid black;
     border-radius: 0px 6px 6px 0px;
-    right:12px;
+    right: 12px;
 }
 
-.MaxHP input, .Initiative input{
+.MaxHP input,
+.Initiative input {
     border: none;
     border-bottom: 1px solid black;
     width: 50px;
@@ -295,8 +330,8 @@ td{
 
 }
 
-.MaxHP, .Initiative
-{
+.MaxHP,
+.Initiative {
     font-size: 10px;
     margin-bottom: 3px;
     color: #696969;
@@ -304,128 +339,191 @@ td{
     margin-right: 2px;
 }
 
-.MaxHP{
-    float: left;   
+.MaxHP {
+    float: left;
 }
 
-.Initiative{
+.Initiative {
     float: right;
 }
 
-#Status{
+.Health .item-label {
+    transform: rotate(0deg);
+    margin: auto;
+    width: 100px;
+    top: 18px;
+}
+
+
+
+#Status {
     left: 1px;
     top: 6px;
 }
 
-.Talents{
+.Talents {
     position: relative;
     width: 140px;
     height: 310px;
-    top: 10px;
+    top: -32px;
     left: 2px;
     float: left;
     border: 2px solid black;
     border-radius: 6px;
 }
 
-.Talent-Item{
+.Health .item-label .label-text,
+.Talents .item-label .label-text,
+.Strikes .item-label .label-text,
+.Notes .item-label .label-text,
+.Languages .item-label .label-text,
+.Traits .item-label .label-text,
+.Equipment .item-label .label-text,
+.Portrait .item-label .label-text,
+.spell-slots .item-label .label-text  {
+    transform: rotate(0deg);
+}
+
+.Talents .item-label,
+.Strikes .item-label,
+.Notes .item-label,
+.Languages .item-label,
+.Traits .item-label,
+.Equipment .item-label,
+.Portrait .item-label,
+.spell-slots .item-label {
+    transform: rotate(0deg);
+    margin: auto;
+    width: 100px;
+    top: 1px;
+}
+
+
+.spell-slots .item-label{
+    top:-91px;
+}
+
+.Strikes .item-label {
+    top: -339px;
+}
+
+.Notes .item-label {
+    top: -3px;
+}
+
+.Languages .item-label {
+    top: -365px;
+    width: 120px;
+}
+
+.Traits .item-label {
+    top: -225px;
+}
+
+.Equipment .item-label {
+    top: -85px;
+    width: 120px;
+}
+
+.Portrait .item-label{
+    top: 145px;
+}
+
+.Talent-Item {
     font-size: 9px;
     font-weight: 600;
     margin-bottom: 2px;
 }
 
-.Talent-Dot, .Talent-Dot-Toggled{
+.Talent-Dot,
+.Talent-Dot-Toggled {
     position: relative;
     float: left;
     width: 22px;
     height: 7px;
     border: 1px solid black;
     border-radius: 20px;
-    top:3px;
+    top: 3px;
     margin-right: 2px;
     margin-left: 2px;
 }
 
-.Talent-Dot{
+.Talent-Dot {
     background-color: white;
 }
 
-.Talent-Dot-Toggled{
+.Talent-Dot-Toggled {
     background-color: black;
 }
 
-.Notes{
+.Notes {
     position: relative;
     float: right;
     height: 310px;
     width: 140px;
     border: 2px solid black;
     border-radius: 6px;
-    top: 10px;
+    top: -32px;
     right: 10px;
 }
 
-.Strikes{
+.Strikes {
     position: relative;
     margin: auto;
     height: 310px;
     width: 288px;
     border: 2px solid black;
     border-radius: 6px;
-    top: 382px;
+    top: 330px;
     right: 4px;
 }
 
-.Strikes textarea
-{
+.Strikes textarea {
     bottom: 365px;
     left: 2px;
 }
 
-.Languages
-{
+.Languages {
     position: relative;
     width: 140px;
     height: 140px;
     border: 2px solid black;
     border-radius: 6px;
-    top: 385px;
+    top: 335px;
     left: 2px;
 }
 
-.Traits
-{
+.Traits {
     position: relative;
     width: 140px;
     height: 140px;
     border: 2px solid black;
     border-radius: 6px;
-    top: 245px;
+    top: 195px;
     left: 147px;
 }
 
-.Equipment
-{
+.Equipment {
     position: relative;
     width: 288px;
     height: 140px;
     border: 2px solid black;
     border-radius: 6px;
-    top: 105px;
+    top: 55px;
     left: 293px;
 }
 
-.Languages textarea{
-    bottom: 370px;
+.Languages textarea {
+    bottom: 360px;
     left: 1px;
 }
 
-.Traits textarea{
-    bottom: 230px;
-    left:1px;
+.Traits textarea {
+    bottom: 220px;
+    left: 1px;
 }
 
-.Equipment textarea{
-    bottom: 90px;
+.Equipment textarea {
+    bottom: 80px;
     left: 2px;
 }
