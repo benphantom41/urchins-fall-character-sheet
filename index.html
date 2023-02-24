@@ -27,9 +27,24 @@
                     };
                 </script>
             </li>
+            <li>
+                <button data-dismiss="alert" onclick="Export()">Export to Clipboard</button>
+                <script>
+                    var Export = function(event){
+                    let str = localStorage.getItem('data');
+                    let copyText = document.getElementById('copy')
+                    copyText.value = str
+                    copyText.style.visibility = "visible"
+                    copyText.select();
+                    document.execCommand("copy");
+                    copyText.style.visibility = "hidden";
+                    };
+                </script>
+            </li>
         </ul>
     </div>
 
+    <input id="copy" style="position: absolute; top: 0; left: 0; user-select: all; visibility: hidden;">
 
     <div class="character-sheet">
 
