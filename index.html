@@ -12,11 +12,21 @@
 
 <body>
     <div class="topnav">
-        <ul>
-            <!-- <li class="Menu"><a href="index.html">Home</a></li>
-            <li class="Menu"><a href="projects.html">Projects</a></li>
-            <li class="Menu">Contact</li>-->
-            <button onclick="Save();">Save!</button>
+        <ul style="display:block;">
+            <li>
+                <button onclick="Save();">Save!</button>
+            </li>
+            <li>
+                <input type="file" accept="image/gif, image/jpeg, image/png" name="image" id="file"
+                    onchange="loadFile(event)" style="display: none;">
+                <p id="FileUpload"><label for="file" style="cursor: pointer;">Upload Image</label></p>
+                <script>
+                    var loadFile = function (event) {
+                        var image = document.getElementById('output-portrait');
+                        image.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                </script>
+            </li>
         </ul>
     </div>
 
@@ -26,6 +36,9 @@
         <div class="character-sheet-background">
             <div class="Logo"><img src="Images/UrchinsFallLogo.svg" alt=""></div>
             <div class="Portrait">
+                <div id="output">
+                    <img class="img-fluid" id="output-portrait" width="160">
+                </div>
                 <div class="item-label">
                     <div class="label-text">Portrait</div>
                 </div>
@@ -183,7 +196,8 @@
                             <td style="position: relative;"><img src="Images/Stat Block.svg" alt=""
                                     style="position: absolute;">
                                 <div id="Bonus-Stat-Dexterity"></div>
-                                <input type="text" name="Stat-Dexterity" id="Stat-Dexterity" onchange="UpdateStatBonus(this)">
+                                <input type="text" name="Stat-Dexterity" id="Stat-Dexterity"
+                                    onchange="UpdateStatBonus(this)">
                             </td>
                         </tr>
                         <tr style="height: 60px;">

@@ -530,10 +530,6 @@ td {
     left: 2px;
 }
 
-button {
-    margin-top: 5px;
-}
-
 
 [id^=Bonus-Stat] {
     position: relative;
@@ -541,4 +537,21 @@ button {
     width: 26px;
     left: 32px;
     bottom: 3px;
+}
+
+#FileUpload{
+    background-color: #F0F0F0;
+    border: 2px solid black;
+    color:#000000;
+    padding: 1px 6px;
+}
+
+#output{
+    overflow: hidden;
+    height: 156px;
+}
+
+.Portrait .item-label{
+    background-color: #ffffff;
+    top:-11px;
 }
