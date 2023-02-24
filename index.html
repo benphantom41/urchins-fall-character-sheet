@@ -22,7 +22,7 @@
 
 
     <div class="character-sheet">
-        
+
         <div class="character-sheet-background">
             <div class="Logo"><img src="Images/UrchinsFallLogo.svg" alt=""></div>
             <div class="Portrait">
@@ -170,24 +170,37 @@
                             <td>Dexterity</td>
                         </tr>
                         <tr style="height:60px;">
-                            <td style="position: relative;"><img src="Images/Stat Block.svg" alt=""
-                                    style="position: absolute;"><input type="text" name="Stat-Stance" id="Stat-Stance">
+                            <td style="position: relative;">
+                                <img src="Images/Stat Block.svg" alt="" style="position: absolute;">
+                                <div id="Bonus-Stat-Stance"></div>
+                                <input type="text" name="Stat-Stance" id="Stat-Stance" onchange="UpdateStatBonus(this)">
                             </td>
                             <td style="position: relative;"><img src="Images/Stat Block.svg" alt=""
-                                    style="position: absolute;"><input type="text" name="Stat-Power" id="Stat-Power">
+                                    style="position: absolute;">
+                                <div id="Bonus-Stat-Power"></div>
+                                <input type="text" name="Stat-Power" id="Stat-Power" onchange="UpdateStatBonus(this)">
                             </td>
                             <td style="position: relative;"><img src="Images/Stat Block.svg" alt=""
-                                    style="position: absolute;"><input type="text" name="Stat-Dexterity"
-                                    id="Stat-Dexterity"></td>
+                                    style="position: absolute;">
+                                <div id="Bonus-Stat-Dexterity"></div>
+                                <input type="text" name="Stat-Dexterity" id="Stat-Dexterity" onchange="UpdateStatBonus(this)">
+                            </td>
                         </tr>
                         <tr style="height: 60px;">
                             <td style="position: relative;"><img src="Images/Stat Block.svg" alt=""
-                                    style="position: absolute;"><input type="text" name="Stat-Wit" id="Stat-Wit"></td>
+                                    style="position: absolute;">
+                                <div id="Bonus-Stat-Wit"></div><input type="text" name="Stat-Wit" id="Stat-Wit"
+                                    onchange="UpdateStatBonus(this)">
+                            </td>
                             <td style="position: relative;"><img src="Images/Stat Block.svg" alt=""
-                                    style="position: absolute;"><input type="text" name="Stat-Instinct"
-                                    id="Stat-Instinct"></td>
+                                    style="position: absolute;">
+                                <div id="Bonus-Stat-Instinct"></div><input type="text" name="Stat-Instinct"
+                                    id="Stat-Instinct" onchange="UpdateStatBonus(this)">
+                            </td>
                             <td style="position: relative;"><img src="Images/Stat Block.svg" alt=""
-                                    style="position: absolute;"><input type="text" name="Stat-Charm" id="Stat-Charm">
+                                    style="position: absolute;">
+                                <div id="Bonus-Stat-Charm"></div><input type="text" name="Stat-Charm" id="Stat-Charm"
+                                    onchange="UpdateStatBonus(this)">
                             </td>
                         </tr>
                         <tr>

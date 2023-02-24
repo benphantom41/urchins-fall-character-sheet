@@ -30,6 +30,21 @@ for (let i = 0; i < talentDots.length; i++) {
     })
 }
 
+
+function UpdateStatBonus(Stat)
+{
+    
+
+    let bonus = document.getElementById('Bonus-'+Stat.name);
+
+    if(Stat.value == '') {bonus.textContent = ''; return;}
+
+     let content = Math.floor((Stat.value - 10) / 2);
+     if (content > 0) {content = '+'+content}
+     bonus.textContent = content;
+}
+
+
 function Save() {
     var saveData = {};
     saveData.Name = document.getElementById('name').value;
@@ -195,3 +210,13 @@ function Load() {
 }
 
 Load();
+
+
+
+/*Updates the stat bonus after the data is loaded in*/ 
+UpdateStatBonus(document.getElementById('Stat-Stance'));
+UpdateStatBonus(document.getElementById('Stat-Power'));
+UpdateStatBonus(document.getElementById('Stat-Dexterity'));
+UpdateStatBonus(document.getElementById('Stat-Wit'));
+UpdateStatBonus(document.getElementById('Stat-Instinct'));
+UpdateStatBonus(document.getElementById('Stat-Charm'));

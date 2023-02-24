@@ -294,14 +294,13 @@ td input {
     position: relative;
     height: 35px;
     width: 40px;
-    top: 2px;
+    top: -3px;
     left: 1px;
     border: none;
     background-color: rgba(0, 0, 0, 0);
     text-align: center;
     font-size: 15px;
     font-weight: 600;
-
 }
 
 td img {
@@ -529,4 +528,17 @@ td {
 .Equipment textarea {
     bottom: 80px;
     left: 2px;
+}
+
+button {
+    margin-top: 5px;
+}
+
+
+[id^=Bonus-Stat] {
+    position: relative;
+    height: 15px;
+    width: 26px;
+    left: 32px;
+    bottom: 3px;
 }
